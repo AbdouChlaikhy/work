@@ -1,0 +1,40 @@
+
+ALTER TABLE etudiant CHANGE nomE 
+	nomE varchar (30) NOT NULL;
+    ALTER TABLE etudiant CHANGE prenomE 
+	prenomE varchar (30) NOT NULL;
+ALTER TABLE etudiant ADD FOREIGN KEY (idg)
+	REFERENCES groupe(idg) ON DELETE SET NULL;
+ALTER TABLE module ADD PRIMARY KEY (idM);
+ALTER TABLE module CHANGE libelle
+	libelle varchar(30) NOT NULL;
+ALTER TABLE professeur ADD PRIMARY KEY (idP);
+ALTER TABLE professeur CHANGE nomP
+	nomE varchar (30) NOT NULL;
+ALTER TABLE professeur CHANGE prenomP 
+	prenomP varchar (30) NOT NULL;
+ALTER TABLE examen ADD PRIMARY KEY (idEx);
+ALTER TABLE examen ADD FOREIGN KEY (idg)
+REFERENCES groupe(idg) ON DELETE SET NULL;
+ALTER TABLE examen ADD FOREIGN KEY (idM)
+REFERENCES module(idM) ON DELETE SET NULL;
+ALTER TABLE examen ADD FOREIGN KEY (idP)
+REFERENCES professeur(idP) ON DELETE SET NULL;
+ALTER TABLE examen CHANGE (DateEX)
+	DateEx varchar(30) NOT NULL;
+ALTER TABLE note ADD PRIMARY KEY (idN);
+ALTER TABLE note ADD FOREIGN KEY (idEx)
+REFERENCES examen(idEx) ON DELETE SET NULL;
+ALTER TABLE note ADD FOREIGN KEY (idE)
+REFERENCES etudiant(idE) ON DELETE SET NULL;
+
+
+    
+    
+ 
+
+
+    
+
+    
+                                    
