@@ -1,0 +1,10 @@
+table{
+    border-color: black;
+    border-collapse: collapse;
+    width: 100%;
+    
+
+}
+.back{
+    background-color: lightgrey;
+}

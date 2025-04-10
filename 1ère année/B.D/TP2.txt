@@ -1,0 +1,35 @@
+create table artist(
+	art_id bigint,
+	art_nom varchar(255),
+	art_date_naissance date NULL,
+	constraint pk_art primary key(art_id)),
+
+
+create table film(
+	film_id bigint primary key,
+	film_nom varchar(255) unique,
+	film_annee year)
+
+create table film_artist(
+	filmart_film_id bigint,
+	filmart_artist_id,
+	filmart_type,
+	constraint pk_film primary key (filmart_film_id,filmart_artist_id),
+	constraint ck_type check(filmart_type IN('acteur','realisateur','compositeur'))),
+
+create table nationalite (
+	nat_film_id bigint,
+	nat_pays varchar(255),
+	constraint fk_nat foreign key (nat_film_id) references film(film_id),
+	constraint ck_type check(nat_pays IN('francais','americain','britannique'))),
+
+alter table film(
+	add (film_genre varchar(255));
+
+alter table film(
+	change film_nom film_titre varchar(255));
+
+alter table film(
+	change film_titre fil_titre text);
+
+alter

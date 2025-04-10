@@ -1,0 +1,46 @@
+body{
+    background-image: url(logo.png) , url(bg.jpg);
+    background-size: 20% , 1000%;
+    background-repeat: no-repeat;
+    background-attachment: fixed , fixed;
+    background-position-x: center , 100%;
+    background-position-y: 20px;
+
+}
+
+.txt1{
+    position: absolute;
+    right: 200px;
+    left: 150px;
+    top: 270px;
+    text-align: center;
+    font-size: 140%;
+}
+
+#link1{
+    position: absolute;
+    right: 200px;
+    left: 150px;
+    top: 350px;
+    text-align: center;
+    text-decoration: none;
+}
+.txt2{
+    position: absolute;
+    right: 210px;
+    left: 150px;
+    top: 400px;
+    text-align: center;
+}
+#link2{
+    position: absolute;
+    right: 200px;
+    left: 150px;
+    top: 500px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.txt1 , #link1 , .txt2 , #link2{
+    text-align: center;
+}

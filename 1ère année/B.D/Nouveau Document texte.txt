@@ -1,0 +1,27 @@
+1-
+CREATE TABLE artiste ( 
+	art_id bigint AUTO_INCREMENT PRIMARY KEY,
+	art_nom varchar(255) NOT NULL ,
+	art_date_naissance date);
+2-
+CREATE TABLE film ( 
+	film_id bigint  auto_increment PRIMARY KEY ,
+	film_nom varchar(255),
+	film_annee date );
+3-
+CREATE TABLE film_artiste(
+	filmart_film_id bigint ,
+	filmart_artiste_id bigint ,
+	filmart_type varchar (255) ,
+	Constraint pk_film primary key (filmart_film_id,filmart_art_id),
+	constraint fk1 foreign key (filmart_film_id) references film(film_id),
+	constraint fk2 foreign key (filmart_film_id) references artiste(art_id),
+	constraint ck check (filmart_type IN ('acteur','realisateur','empositeur')
+4-
+CREATE TABLE nationalite (
+	nat_film_id bigint primary key,
+	nat_pays varchar(255),
+	constraint fk3 foreign key (nat_film_id) referecens film (film_id);
+5-
+ALTER TABLE film add(
+	film_genre varchar(255)check(film_genre IN('policier','aventure','Romantique') 
