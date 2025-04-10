@@ -1,0 +1,9 @@
+A=1
+S=0
+B=0
+while A!=0:
+    A=float(input("Entrez le nombre: "))
+    S=S+A
+    B=B+1
+M=S/(B-1)
+print("la moyenne = ",M)

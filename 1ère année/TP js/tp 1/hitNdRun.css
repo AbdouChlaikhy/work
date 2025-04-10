@@ -1,0 +1,31 @@
+
+div{
+    position: relative;
+    border: 2px solid;
+    width: 500px;
+    height: 500px;
+}
+#up{
+    position: absolute;
+    left: 100px;
+    bottom: 100px;
+}
+#down{
+    position: absolute;
+    left: 100px;
+    bottom: 50px;
+}
+#right{
+    position: absolute;
+    left: 150px;
+    bottom: 75px;
+}
+#left{
+    position: absolute;
+    left: 50px;
+    bottom: 75px;
+}
+img{
+    position: absolute;
+    width: 100px;
+}

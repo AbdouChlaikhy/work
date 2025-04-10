@@ -1,0 +1,40 @@
+<html>
+    <body>
+        <div id="A">
+                  
+        </div>
+        <script>
+            function password_generator( len ) {
+                
+                var str = "0123456789";  
+                
+                var password = "";
+                var character = "";
+                while( password.length<5 ) {
+                    X1 = Math.floor(str.length * Math.random());
+                   
+                    A = str.charAt( X1 );
+                    character += A;
+                    ;
+                    password = character;
+                    
+                    
+                }
+                password=password.split('').sort(function(){return 0.5-Math.random()}).join('');
+                return password.substr(0,len);
+            }
+        let password=password_generator()   
+        let B= document.getElementById("A")
+        if (password%2==0){
+            B.innerHTML+="<p style='color:red'>"+password+"</p>";
+        }
+        else{
+            B.innerHTML+="<p style='color:pink'>"+password+"</p>";
+        }
+                
+                    
+            
+  
+        </script>
+    </body>
+</html>

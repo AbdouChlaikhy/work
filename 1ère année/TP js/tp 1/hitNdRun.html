@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hitNdRun.css">
+</head>
+<body>
+    <div><img src="mew.jpg" alt="mew" id="img"></div>
+    <button id="up">Up</button>
+        <button id="down">Down</button>
+        <button id="right">Right</button>
+        <button id="left">Left</button>
+    
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $("#right ").click(
+            function(){
+                let currenttop=$('#img').css("left");
+                let newtop=parseInt(currenttop) +10;
+                if (newtop< 800){
+                    $('#img').css("left", newtop + "px");
+                }
+                
+                
+
+            }
+        )
+        $("#left ").click(
+            function(){
+                let currenttop=$('#img').css("left");
+                let newtop=parseInt(currenttop) -10;
+                if (newtop>0){
+                    $('#img').css("left", newtop + "px");
+                }
+                
+                
+
+            }
+        )
+        $("#down ").click(
+            function(){
+                let currenttop=$('#img').css("top");
+                let newtop=parseInt(currenttop) +10;
+                if (newtop< 400){
+                    $('#img').css("top", newtop + "px");
+                }
+                
+                
+
+            }
+        )
+        $("#up ").click(
+            function(){
+                let currenttop=$('#img').css("top");
+                let newtop=parseInt(currenttop) -10;
+                if (newtop>0){
+                    $('#img').css("top", newtop + "px");
+                }
+                
+                
+
+            }
+        )
+    </script>
+    
+</body>
+</html>

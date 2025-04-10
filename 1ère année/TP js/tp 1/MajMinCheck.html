@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <script>
+            
+                let T=[];
+                let cmpM=0;
+                let L=[]
+                let cmpm=0
+                var chaine = prompt("Entrez un chaine de character: ");
+                    for (i=0; i<chaine.length;i++){
+                        T.push(chaine.charAt(i).toUpperCase(i))
+                        if (T[i]===chaine.charAt(i)){
+                            cmpM=cmpM+1
+                        }
+                        L.push(chaine.charAt(i).toLowerCase(i))
+                        if (L[i]===chaine.charAt(i)){
+                            cmpm=cmpm+1
+                        }
+                    }
+                
+                
+                    
+                    
+                
+                
+                 
+                document.write("le nombre de Maj est: ",cmpM,"et le nombre de min est: ",cmpm)
+        </script>
+    </body>
+</html>

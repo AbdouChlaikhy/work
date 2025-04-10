@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-weight: bold;
+            color: red;
+
+        }
+
+    </style>
+    
+</head>
+<body>
+    <label for="">Entrez Votre Nom : </label>
+    <input type="text" id="Nom"><br> <br>
+    <label for="">Entrez Votre Prenom</label>
+    <input type="text" id="Prenom">
+    <br><br>
+    <button id="btn">3iw</button>
+    <div id="champ"></div>
+    <script>
+        function mafonction(){
+        let C=document.getElementById("btn");
+        
+        C.onclick=function(){
+            
+            let A=document.getElementById("Nom").value
+            let B=document.getElementById("Prenom").value
+            
+            
+            
+            document.getElementById("champ").innerHTML="<p>"+A+B+"<p>"
+        }
+            
+        
+    }
+        
+        
+mafonction();
+    
+            
+    </script>
+    
+</body>
+</html>

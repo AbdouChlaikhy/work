@@ -1,0 +1,26 @@
+<htlm>
+    <body>
+        <script>
+            let data_list = [-5, -23, 5, 0, 23, -6, 23, -67];
+            let new_list = [];
+            
+            while (data_list.length>0){
+                minimum = data_list[0];  
+                let pos = 0;
+                for (let j = 0; j<data_list.length; j++){ 
+                    if (data_list[j] < minimum){
+                        minimum = data_list[j];
+                        pos = j;
+                    }
+                }
+                new_list.push(minimum)
+                    data_listm = data_list.splice(pos,1);
+                    console.log(data_listm);
+            }
+            document.write(new_list)
+
+            
+
+        </script>
+    </body>
+</htlm>

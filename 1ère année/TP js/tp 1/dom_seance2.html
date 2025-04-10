@@ -1,0 +1,102 @@
+x<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+        <form action="">
+            <table>
+                <thead>
+                    <tr>
+                        <td>
+                            <label>Login:</label> <input type="text" id="login" value="" />
+
+                        </td>
+                        <td id="log">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pass">Password</label><input type="password" id ="pass" />
+
+                        </td>
+                        <td id="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>account</label> 
+                            <select id="account" >
+                                <option value="" selected></option>
+                                <option value="1">SUPERADMIN</option>
+                                <option value="2" >SUPERVISOR</option>
+                                <option value="3"  >SIMPLE SER</option>
+
+                            </select>
+                        </td>
+                        <td id="acc">
+
+                        </td>
+                        <tr>
+                            <td>
+                                <input type="button" id="connect" value="Se connecter" > 
+                            </td>
+                        </tr>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="checkbox">movies</label>
+                            <input type="checkbox">
+                        </td>
+                    </tr>
+                </thead>
+        </form>
+    <div id="content">
+
+    </div>
+
+    <script>
+           let btn = document.getElementById('connect');
+      
+
+           function maFonction(){
+
+           }
+           btn.onclick = function(){
+            let loginInput =   document.getElementById('login').value;
+            let passInput =   document.getElementById('pass').value;
+            let accountChoice =   document.getElementById('account').value;
+            let s = document.getElementById('account');
+            
+            if(loginInput == ""){
+                document.getElementById("log").innerHTML = "login is empty !"
+
+            }
+            else{
+                document.getElementById("log").innerHTML = ""
+
+            }
+            if(passInput == ""){
+                document.getElementById("password").innerHTML = "password is empty !"
+            }
+            else{
+                document.getElementById("password").innerHTML = ""
+            }
+            if(accountChoice == ""){
+                document.getElementById("acc").innerHTML = "account is empty !"
+            }
+            else{
+                document.getElementById("acc").innerHTML = ""
+            }
+
+           }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="TP EX1.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td><label id="lsname">Nom:</label></td><td><input type="text" id="demo"/></td>
+                <td><div id="alpha"></div></td>
+            </tr>
+            <tr>
+                <td><div id="bravo" style="color: red;size: 50%;"></div></td>
+            </tr>
+            <tr>
+                <td><label id="frname">Prenom:</label></td><td><input type="text" id="dem"/></td>
+            </tr>
+            <tr>
+                <td><div id="charlie" style="color: red;size: 50%;"></div></td>
+            </tr>
+            <tr>
+                <td><label id="delta">Date de naissance:</label></td><td><input type="date" id="de"/></td>
+                <td><div id="echo"></div></td>
+            </tr>
+            <tr>
+                <td><div id="foxtrot" style="color: red;size: 50%;"></div></td>
+            </tr>
+            <tr>
+                <td><label id="name">Adresse mail:</label></td><td><input type="email" id="d"/></td>
+            </tr>
+            <tr>
+                <div id="tango" style="color: red;size: 50%;"></div>
+            </tr>
+            <tr>
+                <td><label id="name">Rubriques:</label></td><td><fieldset><input type="checkbox" id="bande"/><label>:Bande déssinées</label><br>
+                    <input type="checkbox" id="science"/><label>:Science fiction</label><br>
+                    <input type="checkbox" id="civil"/><label>:Civillisations</label></fieldset>
+                </td>
+            </tr>
+            <tr>
+                <div id="sierra" style="color: red;size: 50%;"></div>
+            <tr>
+                <td><input type="button" id="inscription" value="sinscrire"/></td>
+                <td><input type="reset" id="init" value="initialisation"/></td>
+            </tr>
+        </table>
+
+        <script>
+            let btn=document.getElementById("inscription");
+            btn.onclick=function(){
+                let a=document.getElementById("demo").value;
+                let b=document.getElementById("dem").value;
+                let c=document.getElementById("de").value;
+                let d=document.getElementById("d").value;
+                let e=document.getElementById("bande").value;
+                let f=document.getElementById("science").value;
+                let g=document.getElementById("civil").value;
+                if(a==""){
+                    document.getElementById("bravo").innerHTML="Vous devez saisir votre nom."
+                    document.getElementById("alpha").innerHTML="* min 3 caractères"
+                }
+                if(b==""){
+                    document.getElementById("charlie").innerHTML="Vous devez entrez votre prénom."
+                }
+                if(c==""){
+                    document.getElementById("foxtrot").innerHTML="Vous devez entrez votre date de naissance."
+                    document.getElementById("echo").innerHTML="Ex 29/09/1995"
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery-3.6.0.js">
+</head>
+
+<body>
+    <style>
+.timer{
+background-color: rgb(157 157 157);
+color: white;
+border: rgb(157 157 157);
+}
+.random{
+    background-color:  rgb(45, 77, 255);
+    text-align: right;
+    color: white;
+    border:rgb(45, 77, 255) 1px ;
+    
+
+}
+
+
+
+    </style>
+    <h1>Resolution des équations du second degré</h1>
+    <button class="timer" onclick="startTime(2)"><strong>02:00</strong></button>
+    <button class="random" onclick="">nouvelle Equation</button>  <br><br> 
+    
+    <input type="text" class="x2"><strong>X²</strong>+
+    <input type="text" class="x"><strong>X</strong>+
+    <input type="text" class="+">=
+    <input type="text" class="=">
+    
+    
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        let  time;
+        
+        function startTime(min) {
+            let timeInS = min * 60;
+            if(time){
+                clearInterval(time);
+                time = null;
+            }else{
+                time = setInterval(function() {
+                if (timeInS >= 0) {
+                    let minutes = parseInt(timeInS / 60);
+                    let seconds = timeInS % 60;
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+                    $('.timer').html(minutes + ":" + seconds);
+                    timeInS--;
+                }
+                else{
+                    clearInterval(timer)
+                }
+            },50);
+            }
+        
+             
+        }
+
+        function generateRandomCoef() {
+
+        }
+        function calculResult() {
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <form action="">
+            <label>Username</label>  
+            <input type="text" id="username"/>
+            <div id="usererror" style="display: inline-block;"></div><br><br>
+            <label>E-mail address</label>
+            <input type="text" id="mail"/>
+            <div id="mail_error"></div>
+            <label>Password</label>
+            <input type="text" id="pass"/>
+            <button id="generate">Generate</button><br><br>
+            <label>First Name</label>
+            <input type="text" id="fname"/>
+            <div id="fname_error"></div>
+            <label>Last Name</label>
+            <input type="text" id="lname"/>
+            <div id="lname_error"></div><br><br>
+            <label>Country</label>
+            <select id="country">
+                <option value="1"selected>-Select a value-</option>
+                <option value="2">Morocco</option>
+                <option value="3">France</option>
+                <option value="4">Belgium</option>
+            </select>
+            <label>City</label>
+            <input type="text" /><br><br>
+            <label>Liscence Healthcare Authority</label>
+            <select id="LHA">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <label>Mobile</label>
+            <input type="tel"/><br><br>
+            <input type="checkbox" id="check"/>
+            <label>I confirm that I am a Pharmacist</label><br><br>
+            <button id="create"  >Create new account</button>
+        </form>
+        <div id="content"></div>
+        <script>
+            function password_generator( len ) {
+                var length = 16;
+                var str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&é'(-è_çà";  
+                var password = "";
+                var character = "";
+                while( password.length<length ) {
+                    X1 = Math.floor(str.length * Math.random()); 
+                    A = str.charAt( X1 );
+                    character += A;
+                    ;
+                    password = character;
+                }
+                password=password.split('').sort(function(){return 0.5-Math.random()}).join('');
+                return password.substr(0,len);
+            }
+            let  btn=document.getElementById("generate");
+            btn.onclick=function(e){
+                e.preventDefault();
+                let ranpass=document.getElementById("pass");
+                ranpass.value=password_generator();
+            }
+            function validate(){
+                let a=document.getElementById("username").value;
+                let b=document.getElementById("mail").value;
+                let c=document.getElementById("fname").value;
+                let d=document.getElementById("lname").value;
+                let e=document.getElementById("country").value;
+                let s=document.getElementById("country");
+                document.getElementById("content").innerHTML+="<b>Account</b>"+s.options[s.selectedIndex].innerHTML;
+                let f=document.getElementById("LHA").value;
+                let g=document.getElementById("check").checked;
+                valid=document.getElementById("create");
+            }
+                valid.onclick=function(){
+                    
+                    
+                    if(a == ""){
+                document.getElementById("usererror").innerText = "login is empty !"
+
+            }
+                }
+            
+        </script>
+    </body>
+</html>
